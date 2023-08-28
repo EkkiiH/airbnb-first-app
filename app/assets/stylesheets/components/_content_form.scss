@@ -16,47 +16,7 @@
   border: 5px solid #fe5f75;
 }
 
-input[type="submit"] {
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px 25px;
-  background-color: darkslategray;
-  color: white;
-  transition: background-color 0.3s ease;
-  border-style: none;
-  border-radius: 50px;
-  border: 3px solid #fff;
-}
-
-input[type="submit"]:hover {
-  background-color: darkslategray;
-  color: white;
-  transition: 1s ease;
-  border-radius: 50px;
-}
-
-.h1-form {
+.title-white {
   padding-bottom: 0px;
   color: #fff;
-}
-
-.btn-primary {
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px 25px;
-  background-color: darkslategrey;
-  color: white;
-  transition: background-color 0.3s ease;
-  border-style: none;
-  border-radius: 50px;
-  border: 3px solid #fff;
-}
-
-.btn-primary:hover {
-  background-color: #fe5f75;
-  color: white;
-  transition: 1s ease;
-  border-radius: 50px;
 }

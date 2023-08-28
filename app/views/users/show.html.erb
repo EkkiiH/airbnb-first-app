@@ -1,16 +1,24 @@
-<p>Bookings listing</p>
+<div class="containt m-3 d-flex">
+  <div class="m-3 p-3">
+    <h3>Bookings listing</h3>
+    <div class="card p-3" style="width:24rem;">
+      <% @bookings.each do |booking|%>
+        <% if booking.user = current_user %>
+          <h5><%= booking.listing.title %></h5>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
-
-<% @bookings.each do |booking|%>
-  <% if booking.user = current_user %>
-    <p><%= booking.listing.title %></p>
-  <% end %>
-<% end %>
-
-<p>listing propreties</p>
-
-<% @listings.each do |listing| %>
-  <% if listing.user = current_user %>
-    <p><%= listing.title %></p>
-  <% end %>
-<% end %>
+  <div class="m-3 p-3">
+    <h3>listing propreties</h3>
+    <div class="card p-3" style="width:24rem;">
+      <% @listings.each do |listing| %>
+        <% if listing.user = current_user %>
+          <h5><%= listing.title %></h5>
+        <% end %>
+      <% end %>
+    <%= link_to '➕ add new', new_listing_path, class: 'btn btn-success' %>
+    </div>
+    </div>
+  </div>
