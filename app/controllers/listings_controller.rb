@@ -3,6 +3,10 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: %i[show edit update]
   def index
     @listings = Listing.all
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query OR location ILIKE :query"
+      @listings = @listings.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show

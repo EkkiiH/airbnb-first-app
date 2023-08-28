@@ -3,17 +3,31 @@
 </div>
 
 <div class="container">
-  <div class="d-flex justify-content-evenly flex-wrap">
-    <% @listings.each do |listing| %>
-      <div class="card-category m-3 p-3" style="width:20rem;">
-        <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
-          <h2><%= listing.title %></h2>
-          <p>🌍 <%= listing.location %></p>
-          <p>💲 <%= listing.price %></p>
+    <div class="col-sm-8 my-3">
+        <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Type a keyword"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <div class="d-flex justify-content-evenly flex-wrap">
+        <% if @listings.any? %>
+        <% @listings.each do |listing| %>
+          <div class="card-category m-3 p-3" style="width:20rem;">
+            <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
+              <h2><%= listing.title %></h2>
+              <p>🌍 <%= listing.location %></p>
+              <p>💲 <%= listing.price %></p>
+            <% end %>
+          </div>
+        <% end %>
+        <% else %>
+          <em>Sorry, no results</em>
+        <% end %>
+    </div>
 </div>
 </div>
 </div>
