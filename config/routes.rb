@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: 'pages#index'
-  resources :pages, except: [:index]
+  root to: 'pages#home'
+  resources :pages, except: [:home]
+  resources :listings
+
 end
