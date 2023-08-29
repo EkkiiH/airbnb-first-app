@@ -10,35 +10,35 @@ Listing.destroy_all
 
 puts 'Creating 5 fake listings'
 
-Listing.create(
+Listing.create!(
   title: 'Little Snow Flake',
   location: 'London',
   price: 75,
   description: 'Cupcake ipsum dolor sit amet. Cotton candy cheesecake sweet roll sweet sesame snaps I love.'
 )
 
-Listing.create(
+Listing.create!(
   title: 'Cool Whip',
   location: 'Rome',
   price: 98,
   description: 'Pie liquorice I love gingerbread chocolate cake icing cake cotton candy I love. Jelly-o cotton candy danish danish fruitcake lemon drops sugar plum lemon drops gummi bears.'
 )
 
-Listing.create(
+Listing.create!(
   title: 'Cosmopolitan',
   location: 'Paris',
   price: 50,
   description: 'Brownie caramels jelly-o dessert I love chocolate dessert jelly I love. Chocolate marzipan jelly I love cake I love caramels cupcake. Candy I love pastry I love brownie cake chupa chups.'
 )
 
-Listing.create(
+Listing.create!(
   title: 'Puff Puff',
   location: 'Stockholm',
   price: 150,
   description: 'Oat cake biscuit danish gingerbread gummies. Danish dragée jujubes donut chupa chups caramels tootsie roll gingerbread. Ice cream gingerbread croissant cupcake donut gummi bears dessert gingerbread dragée. '
 )
 
-Listing.create(
+Listing.create!(
   title: 'Bumble Bee',
   location: 'Amsterdam',
   price: 150,
