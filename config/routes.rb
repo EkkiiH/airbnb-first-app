@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'pages#home'
   resources :pages, except: [:home]
+  resources :listings
 end
