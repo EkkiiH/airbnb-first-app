@@ -1,0 +1,16 @@
+<div class="m-5">
+  <h1>Listings#show</h1>
+  <p>Find me in app/views/listings/show.html.erb</p>
+</div>
+
+<div class="container">
+  <div class="">
+    <%= link_to '⬅', root_path, class:'btn btn-warning' %>
+  </div>
+  <div>
+    <h2><%= @listing.title %></h2>
+    <p><%= @listing.location %></p>
+    <p><%= @listing.price %></p>
+    <p><%= @listing.description %></p>
+  </div>
+</div>
