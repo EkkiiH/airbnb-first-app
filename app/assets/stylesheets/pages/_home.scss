@@ -60,3 +60,28 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.main-ctr {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://www.wegalvanize.com/wp-content/uploads/2019/06/super-dog-1600-1.jpg);
+}
+
+.main-content {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  text-shadow: 0 2px 8px darkslategray;
+}
+
+.main-content:hover {
+  transform: translateY(-10px);
+  transition: 1s ease;
+  color: #fff;
+}

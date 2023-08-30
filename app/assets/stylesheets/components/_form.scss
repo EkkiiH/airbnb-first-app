@@ -1,0 +1,42 @@
+.main-div {
+    text-align: center;
+    min-height: 80vh;
+    padding: 50px;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/06/34/22/1000_F_506342279_tUHRFRnET2zfZcoEaGqEgvNxbHOcg2zl.jpg);
+  }
+  
+.form {
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #ffdea8 , #fec84e);
+    text-align: center;
+    max-width: 400px;
+    border: 5px solid #fff; 
+}
+
+input[type="submit"] {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #fe5f75;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-style: none;
+    border-radius: 50px;
+    border: 3px solid #fff; 
+  }
+  
+input[type="submit"]:hover {
+    background-color: darkslategray;
+    color: white;
+    transition: 1s ease;
+    border-radius: 50px;
+  }
+  
+.h1-form {
+    padding-bottom: 0px;
+    color: #fff;
+  }
