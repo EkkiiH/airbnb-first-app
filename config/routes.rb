@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'listings#index'
   resources :listings, except: :index do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[show new create]
   end
+  resources :users, only: %i[show]
 end
