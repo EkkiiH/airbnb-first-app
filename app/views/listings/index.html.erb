@@ -1,12 +1,19 @@
-<div class="main-ctr">
-  <div class="main-content">
-    <h1>WELCOME TO PALBNB</h1>
-    <p>💪 your fluffy and muscular pal 🦍</p>
-    </div>
-    <div id="home-listing">
-      <% @listings.each do |listing| %>
-      <%= listing.title %>
-    <% end %>
-  </div>
+<div class="m-5">
+  <h1>Listings#index</h1>
+  <p>Find me in app/views/listings/index.html.erb</p>
 </div>
 
+<div class="container">
+  <div class="d-flex justify-content-evenly flex-wrap">
+    <% @listings.each do |listing| %>
+      <div class="card m-3 p-3" style="width:20rem;">
+        <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
+          <h2><%= listing.title %></h2>
+          <p><%= listing.location %></p>
+          <p><%= listing.price %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to '➕ add new', new_listing_path, class: 'btn btn-success' %>
+</div>
