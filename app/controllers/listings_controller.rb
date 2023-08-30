@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show new create edit update]
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_listing, only: %i[show edit update]
   def index
     @listings = Listing.all
@@ -15,8 +15,8 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
-    # raise
-    if @listing.save!
+    @listing.user = current_user
+    if @listing.save
       redirect_to listing_path(@listing)
     else
       render :new, status: :unprocessable_entity
@@ -28,7 +28,11 @@ class ListingsController < ApplicationController
   end
 
   def update
-    @listing.update
+    if @listing.update(listing_params)
+      redirect_to listing_path(@listing)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

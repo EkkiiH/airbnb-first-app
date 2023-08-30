@@ -2,7 +2,9 @@
   <h1>Listings#new</h1>
   <p>Find me in app/views/listings/new.html.erb</p>
 </div>
-
+<div class="">
+    <%= link_to '⬅ go main', root_path, class:'btn btn-primary' %>
+</div>
 <div class="mb-3">
   <%= simple_form_for @listing do |f| %>
     <%= f.input :title %>
