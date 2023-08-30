@@ -24,7 +24,7 @@
   margin: 10px;
   border-radius: 50px;
 }
-.socialIcons .bi{
+.socialIcons i{
   height: 40px;
   width: 40px;
   font-size: 30px;
@@ -41,9 +41,9 @@
   padding: 8px;
   justify-content: center;
   display: flex;
-  color: darkslategray;
+  color: white;
   background-color: #191927;
-  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+  background-image: linear-gradient(315deg, #191927 0%, darkslategray 74%);
   font-family: 'Poppins', sans-serif;
 }
 
