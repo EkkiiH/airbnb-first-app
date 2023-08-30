@@ -1,19 +1,20 @@
-<div class="m-5">
-  <h1>Listings#show</h1>
-  <p>Find me in app/views/listings/show.html.erb</p>
-</div>
-<div class="">
-    <%= link_to '⬅ go main', root_path, class:'btn btn-primary' %>
-</div>
+<div class="main-div1">
+  <div class="form1">
+    <div class="m-5">
+      <h1>Add your Buddy</h1>
+    </div>
 
-<div class="container">
-  <div>
-    <h2><%= @listing.title %></h2>
-    <p><%= @listing.location %></p>
-    <p><%= @listing.price %></p>
-    <p><%= @listing.description %></p>
-  </div>
-  <div class="">
-    <%= link_to '✏ edit', edit_listing_path, class:'btn btn-warning' %>
+    <div class="container">
+      <div>
+        <h2><%= @listing.title %></h2>
+        <p><%= @listing.location %></p>
+        <p><%= @listing.price %></p>
+        <p><%= @listing.description %></p>
+      </div>
+      <div class="">
+        <%= link_to '✏ edit', edit_listing_path, class:'btn btn-warning' %>
+        <%= link_to '⬅ go main', root_path, class:'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 </div>
