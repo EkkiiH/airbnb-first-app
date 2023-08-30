@@ -1,0 +1,16 @@
+<p>Bookings listing</p>
+
+
+<% @bookings.each do |booking|%>
+  <% if booking.user = current_user %>
+    <p><%= booking.listing.title %></p>
+  <% end %>
+<% end %>
+
+<p>listing propreties</p>
+
+<% @listings.each do |listing| %>
+  <% if listing.user = current_user %>
+    <p><%= listing.title %></p>
+  <% end %>
+<% end %>
