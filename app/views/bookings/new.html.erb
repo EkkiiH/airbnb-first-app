@@ -1,11 +1,13 @@
-<h1>Here make your booking with <%= (@listing.title) %> </h1>
+<div class="">
+  <h1>Here make your booking with <%= (@listing.title) %> </h1>
 
-<%= simple_form_for [@listing, @booking] do |f|  %>
-  <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  <%# <%= f.input :start_date, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
-  <%# <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %> <%# %>  <%#%>
+  <%= simple_form_for [@listing, @booking] do |f|  %>
+    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%# <%= f.input :start_date, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
+    <%# <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %> <%# %>  <%#%>
 
-  <%= f.submit "book", class: "btn btn-primary btn-lg btn-block btn-booking" %>
+    <%= f.submit "book", class: "btn btn-primary btn-lg btn-block btn-booking" %>
 
-<% end %>
+  <% end %>
+</div>

@@ -5,11 +5,11 @@
 <div class="container">
   <div class="d-flex justify-content-evenly flex-wrap">
     <% @listings.each do |listing| %>
-      <div class="card m-3 p-3" style="width:20rem;">
+      <div class="card-category m-3 p-3" style="width:20rem;">
         <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
           <h2><%= listing.title %></h2>
-          <p><%= listing.location %></p>
-          <p><%= listing.price %></p>
+          <p>🌍 <%= listing.location %></p>
+          <p>💲 <%= listing.price %></p>
         <% end %>
       </div>
     <% end %>
