@@ -7,10 +7,10 @@ class ListingsController < ApplicationController
     if params[:query].present?
       sql_subquery = "title ILIKE :query OR location ILIKE :query"
       @listings = @listings.where(sql_subquery, query: "%#{params[:query]}%")
-      @markers = @listings.geocoded.map do |listing| {
-        lat: listing.latitude,
-        lng: listing.longitude}
-      end
+    end
+    @markers = @listings.geocoded.map do |listing| {
+      lat: listing.latitude,
+      lng: listing.longitude}
     end
   end
 
