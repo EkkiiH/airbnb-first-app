@@ -7,6 +7,7 @@
     <% @listings.each do |listing| %>
       <div class="card-category m-3 p-3" style="width:20rem;">
         <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
+          <div class="img-show" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
           <h2><%= listing.title %></h2>
           <p>🌍 <%= listing.location %></p>
           <p>💲 <%= listing.price %></p>
