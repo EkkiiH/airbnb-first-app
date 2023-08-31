@@ -18,3 +18,16 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.avatar-shadow {
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(33, 37, 41);
+  // border: 2px solid #fff;
+}
+
+.avatar-shadow:hover {
+  background-color: #fff;
+  // box-shadow: 0 0 4px rgba(128, 128, 129, 0.8);
+  transition: ease, 0.3s;
+}

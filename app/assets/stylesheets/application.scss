@@ -10,19 +10,3 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-
-.navbar-abb {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-abb .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-abb .navbar-brand img {
-  width: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
