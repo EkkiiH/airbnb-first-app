@@ -26,7 +26,13 @@
 
 
 .text-product {
+  width: 50%;
   min-width: 140px !important;
-  max-width: 50%;
-
+  max-width: 80%;
+  background-color: #fff;
+  padding: 4rem;
+  overflow:hidden;
+}
+.text-product p {
+  padding: 0.4rem;
 }
