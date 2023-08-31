@@ -20,7 +20,7 @@ puts 'Creating 5 fake listings'
 
 listing1 = Listing.new(
   title: 'Little Snow Flake',
-  location: 'London',
+  location: 'Berlin, Germany',
   price: 75,
   description: 'Cupcake ipsum dolor sit amet. Cotton candy cheesecake sweet roll sweet sesame snaps I love.',
   user: user
