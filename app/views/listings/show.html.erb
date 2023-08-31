@@ -1,19 +1,17 @@
-<div class="main-div1">
-  <div class="form1">
-    <div class="m-5">
-      <h1>Add your Buddy</h1>
-    </div>
-  </div>   
+<div class="main-div1 m-5">
+  <div class="form1 my-5">
+      <h1>Your future Buddy</h1>
+  </div>
   <div class="container">
     <div>
       <h2><%= @listing.title %></h2>
-      <p><%= @listing.location %></p>
-      <p><%= @listing.price %></p>
+      <p>🌍 <%= @listing.location %></p>
+      <p>💲 <%= @listing.price %></p>
       <p><%= @listing.description %></p>
     </div>
     <div class="">
       <%= link_to '✏ edit', edit_listing_path, class:'btn btn-warning' %>
-      <%= link_to "book", new_listing_booking_path(@listing), class:'btn btn-primary' %>
+      <%= link_to "book", new_listing_booking_path(@listing), class:'btn btn-success' %>
     </div>
   </div>
 </div>
