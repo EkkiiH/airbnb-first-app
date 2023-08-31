@@ -10,14 +10,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
-            <li >
-              <input type="text" placeholder="Search.." class="navbar-search">
-            </li>
             <li class="nav-item mr-2  active">
-            <%= link_to "Home", root_path, class: 'custom-btn btn-dark-pink' %>
+              <%= link_to "Home", root_path, class: 'custom-btn btn-dark-pink' %>
             </li>
             <li class="nav-item mr-2 ">
-            <%= link_to '➕ add new', new_listing_path, class: 'custom-btn btn-dark-pink' %>
+              <%= link_to '➕ add new', new_listing_path, class: 'custom-btn btn-dark-pink' %>
             </li>
             <li class="nav-item dropdown" >
               <%= image_tag("https://res.cloudinary.com/duewacljk/image/upload/v1693476715/cgsj0gqiml85gmh3m1qf.svg",

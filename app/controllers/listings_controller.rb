@@ -1,21 +1,20 @@
 class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_listing, only: %i[show edit update]
+
   def index
     @listings = Listing.all
-    # The `geocoded` scope filters only listings with coordinates
-    @markers = @listings.geocoded.map do |listing|
-      {
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query OR location ILIKE :query"
+      @listings = @listings.where(sql_subquery, query: "%#{params[:query]}%")
+      @markers = @listings.geocoded.map do |listing| {
         lat: listing.latitude,
-        lng: listing.longitude
-        # info_window_html: render_to_string(partial: "info_window", locals: {listing: listing}),
-        # marker_html: render_to_string(partial: "marker")
-      }
+        lng: listing.longitude}
+      end
     end
   end
 
   def show
-    #
   end
 
   def new
@@ -33,7 +32,6 @@ class ListingsController < ApplicationController
   end
 
   def edit
-    #
   end
 
   def update
