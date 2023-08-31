@@ -5,6 +5,11 @@
 
 <div class="container">
   <div class="d-flex justify-content-evenly flex-wrap">
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
     <% @listings.each do |listing| %>
       <div class="card m-3 p-3" style="width:20rem;">
         <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
