@@ -12,7 +12,7 @@
         <%= f.input :description, :as => :text, label: false, placeholder: "Write the description...", :input_html => { class: 'test', :cols => 5, :rows => 6 } %>
         <%= f.input :photo, as: :file, label: false, placeholder: "Upload a pic of your buddy..."  %>
         <div>
-          <%= link_to 'Cancel', root_path, class:'btn-pill-pink' %>
+          <%= link_to 'Cancel', listing_path, class:'btn-pill-pink' %>
           <%= f.submit value: 'Send your edit', class:'btn-pill-pink' %>
         </div>
       <% end %>

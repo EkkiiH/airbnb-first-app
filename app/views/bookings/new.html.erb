@@ -1,13 +1,18 @@
-<div class="">
-  <h1>Here make your booking with <%= (@listing.title) %> </h1>
-
-  <%= simple_form_for [@listing, @booking] do |f|  %>
-    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-    <%# <%= f.input :start_date, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
-    <%# <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %> <%# %>  <%#%>
-
-    <%= f.submit "book", class: "btn btn-primary btn-lg btn-block btn-booking" %>
-
-  <% end %>
+<div class="light-bckgrnd py-5 h-100">
+  <div class="container-form col-sm-8 col-lg-6">
+    <div class="m-5">
+      <h1>Select your booking with <%= (@listing.title) %> </h1>
+      <p>specify the prefered dates.</p>
+    </div>
+    <div class="mb-3 form">
+      <%= simple_form_for [@listing, @booking] do |f|  %>
+        <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+        <div>
+          <%= link_to 'Cancel', listing_path(@listing), class:'btn-pill-pink' %>
+          <%= f.submit 'Confirm your dates', class: "btn-pill-pink" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
