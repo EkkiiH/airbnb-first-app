@@ -1,5 +1,6 @@
 class Listing < ApplicationRecord
   belongs_to :user
+  has_one_attached :photo
   validates :title, uniqueness: true
   validates :location, presence: true
   validates :price, presence: true

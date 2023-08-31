@@ -7,12 +7,13 @@
     <div class="mb-3">
       <%= simple_form_for @listing do |f| %>
         <%= f.input :title, label: false, placeholder: "Write the name of your buddy..." %>
-        <%= f.input :location, label: false, placeholder: "Write the location..." %>
-        <%= f.input :price, label: false, placeholder: "Write the price..." %>
+        <%= f.input :location, label: false, placeholder: "Where to pick it up..." %>
+        <%= f.input :price, label: false, placeholder: "How much for the day?" %>
         <%= f.input :description, label: false, placeholder: "Write the description..." %>
+        <%= f.input :photo, as: :file, label: false, placeholder: "Upload a pic of your buddy..."  %>
         <div>
-          <%= link_to 'go main', root_path, class:'btn btn-primary' %>
-          <%= f.submit%>
+          <%= link_to 'Cancel', root_path, class:'btn-pill-pink' %>
+          <%= f.submit value: 'Add a buddy', class:'btn-pill-pink' %>
         </div>
       <% end %>
 

@@ -3,15 +3,18 @@
       <h1>Your future Buddy</h1>
   </div>
   <div class="container">
-    <div>
-      <h2><%= @listing.title %></h2>
-      <p>🌍 <%= @listing.location %></p>
-      <p>💲 <%= @listing.price %></p>
-      <p><%= @listing.description %></p>
+    <div class="m-3 d-flex">
+      <div class="img-product"><%= cl_image_tag(@listing.photo.key, width: 400, height: 600,  crop: :fill)  %></div>
+      <div class="text-product container p-5">
+        <h2><%= @listing.title %></h2>
+        <p>🌍 <%= @listing.location %></p>
+        <p>💲 <%= @listing.price %></p>
+        <p><%= @listing.description %></p>
+      </div>
     </div>
     <div class="">
-      <%= link_to '✏ edit', edit_listing_path, class:'btn btn-warning' %>
-      <%= link_to "book", new_listing_booking_path(@listing), class:'btn btn-success' %>
+      <%= link_to '✏ edit', edit_listing_path, class:'btn-pill-pink' %>
+      <%= link_to "book", new_listing_booking_path(@listing), class:'btn-pill-pink' %>
     </div>
   </div>
 </div>
