@@ -2,7 +2,7 @@
   <div class="navbar navbar-expand-sm navbar-light sticky navbar-abb col-12 ">
     <div class="container-fluid">
       <%= link_to root_path, class: "navbar-brand navbar-img-bckgrnd" do %>
-        <%= image_tag "logo.png" %>
+        <%= image_tag("https://res.cloudinary.com/duewacljk/image/upload/v1693476662/txmxyneipmhjwzwcr948.png") %>
       <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,23 +11,25 @@
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
             <li class="nav-item mr-2  active">
-              <%= link_to "Home", root_path, class: 'custom-btn btn-dark-blue' %>
+              <%= link_to "profil", user_path(current_user), class: 'custom-btn btn-dark-pink' %>
             </li>
             <li class="nav-item mr-2 ">
-              <%= link_to '➕ add new', new_listing_path, class: 'custom-btn btn-dark-blue' %>
+              <%= link_to '➕ add new', new_listing_path, class: 'custom-btn btn-dark-pink' %>
             </li>
-            <%# <li class="nav-item">
-              <%= link_to "Messages", "#", class: "nav-link" %>
-            <%#</li> %>
             <li class="nav-item dropdown" >
-              <%= image_tag "user.svg", class: "avatar-shadow dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_tag("https://res.cloudinary.com/duewacljk/image/upload/v1693476715/cgsj0gqiml85gmh3m1qf.svg",
+                              class: "avatar-shadow dropdown-toggle",
+                              id: "navbarDropdown",
+                              data: { bs_toggle: "dropdown" },
+                              'aria-haspopup': true,
+                              'aria-expanded': false ) %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="z-index:999">
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
               </div>
             </li>
             <% else %>
             <li class="nav-item">
-              <%= link_to "Login", new_user_session_path, class: "custom-btn btn-dark-blue" %>
+              <%= link_to "Login", new_user_session_path, class: "custom-btn btn-dark-pink" %>
             </li>
           <% end %>
         </ul>

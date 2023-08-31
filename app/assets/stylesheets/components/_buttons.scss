@@ -1,3 +1,24 @@
+.btn-pill-pink {
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block;
+  background-color: #212529;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-style: none;
+  border-radius: 50px;
+  text-wrap: nowrap;
+}
+
+.btn-pill-pink:hover {
+  background-color:#fe5f75;
+  transition: 1s ease;
+  border-radius: 50px;
+}
+
+
 .btn-grey-pill {
   font-size: 16px;
   text-align: center;
@@ -12,7 +33,7 @@
 }
 
 .btn-grey-pill:hover {
-  background-color: #fe5f75;
+  background-color: darkslategrey;
   color: white;
   transition: 1s ease;
   border-radius: 50px;
@@ -28,7 +49,7 @@
   font-weight: 500;
 }
 
-.btn-dark-blue {
+.btn-dark-pink {
   box-sizing: border-box;
   color: white;
   display: inline-block;
@@ -37,10 +58,11 @@
   background-color: #fc9842;
   background-image: linear-gradient(45deg, #fc9842 0%, #fe5f75 74%);
   border-top: 2px solid #fc9842 ;
+  text-wrap: nowrap;
 }
 
-.btn-dark-blue:after {
-  background-color: rgb(33, 37, 41);
+.btn-dark-pink:after {
+  background-color: #212529;
   position: absolute;
   content: "";
   width: 100%;
@@ -51,15 +73,15 @@
   transition: all 0.3s ease;
 }
 
-.btn-dark-blue:hover {
+.btn-dark-pink:hover {
   border-top-color: #fff;
 }
 
-.btn-dark-blue:hover:after {
+.btn-dark-pink:hover:after {
   top: 0;
   bottom: auto;
   height: 100%;
 }
-.btn-dark-blue:active {
+.btn-dark-pink:active {
   top: 2px;
 }

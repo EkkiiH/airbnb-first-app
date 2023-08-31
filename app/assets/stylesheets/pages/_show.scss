@@ -1,0 +1,16 @@
+.img-product {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  margin-right: 2rem;
+}
+
+
+.text-product {
+  min-width: 140px !important;
+  max-width: 50%;
+}
