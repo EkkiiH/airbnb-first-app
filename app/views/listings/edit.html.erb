@@ -1,19 +1,20 @@
-<div class="main-div">
-  <div class="form">
+<div class="light-bckgrnd py-5">
+  <div class="container-form col-sm-8 col-lg-6">
     <div class="m-5">
-      <h1>Listings#edit</h1>
-      <p>Find me in app/views/listings/edit.html.erb</p>
+      <h1>Edit your buddy's profil</h1>
+      <p>change the fields of your buddy here if needed before sending.</p>
     </div>
-    <div class="">
-        <%= link_to '⬅ go main', root_path, class:'btn btn-primary' %>
-    </div>
-    <div class="mb-3">
+    <div class="mb-3 form">
       <%= simple_form_for @listing do |f| %>
-        <%= f.input :title %>
-        <%= f.input :location %>
-        <%= f.input :price %>
-        <%= f.input :description %>
-        <%= f.submit%>
+        <%= f.input :title, label: false, placeholder: "Write the name of your buddy..." %>
+        <%= f.input :location, label: false, placeholder: "Where to pick it up..." %>
+        <%= f.input :price, label: false, placeholder: "How much for the day?" %>
+        <%= f.input :description, :as => :text, label: false, placeholder: "Write the description...", :input_html => { class: 'test', :cols => 5, :rows => 6 } %>
+        <%= f.input :photo, as: :file, label: false, placeholder: "Upload a pic of your buddy..."  %>
+        <div>
+          <%= link_to 'Cancel', root_path, class:'btn-pill-pink' %>
+          <%= f.submit value: 'Send your edit', class:'btn-pill-pink' %>
+        </div>
       <% end %>
     </div>
   </div>
