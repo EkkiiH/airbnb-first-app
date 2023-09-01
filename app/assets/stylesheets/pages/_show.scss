@@ -16,7 +16,8 @@
 .img-product {
   border-radius: 12px;
   overflow: hidden;
-  width: 500px;
+  min-width: 160px;
+  width: 400px;
   height: 500px;
   background-size: cover;
   background-position: center;

@@ -10,15 +10,17 @@
 
 <div class="d-flex flex-wrap light-bckgrnd">
   <div class="m-3 mb-5 px-5">
-    <h3>Your incomming booking with Buddies</h3>
+    <h3 class="my-3">Your incomming booking with Buddies</h3>
 
     <div class="d-flex justify-content-evenly flex-wrap">
       <% @bookings.each do |booking|%>
         <% if booking.user = current_user %>
-          <div class="card-category m-3 text-center">
-            <div class="card-display align-self-end" style="background-image: url('<%= cl_image_path booking.listing.photo.key %>')" ></div>
-            <h3 class="pt-5"><%= booking.listing.title %></h3>
-            <p class="py-3">📅 From <%= booking.start_date.strftime('%d-%m-%Y') %><br>till <%= booking.end_date.strftime('%d-%m-%Y') %></p>
+          <div class="card-category m-3">
+            <div class="card-display" style="background-image: url('<%= cl_image_path booking.listing.photo.key %>')" ></div>
+            <h3 class="px-3 pt-5"><%= booking.listing.title %></h3>
+            <p class="p-3">&nbsp&nbsp&nbsp&nbsp Your buddy wil be available :<br>
+            📅 From <%= booking.start_date.strftime('%d-%m-%Y') %><br>&nbsp&nbsp&nbsp&nbsp till <%= booking.end_date.strftime('%d-%m-%Y') %></br>
+            🌍 location: <%= booking.listing.location %></p>
           </div>
         <% end %>
       <% end %>
@@ -26,14 +28,19 @@
   </div>
 
   <div class="m-3 mb-5 px-5">
-    <h3>All your buddies on rent</h3>
+    <h3 class="my-3">All your buddies on rent</h3>
 
     <div class="d-flex justify-content-evenly flex-wrap">
       <% @listings.each do |listing| %>
         <% if listing.user = current_user %>
-          <div class="card-category m-3 text-center">
-            <div class="card-display m-3" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
-            <h5><%= listing.title %></h5>
+          <div class="card-category m-3">
+            <div class="card-display" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
+            <h5 class="px-3 pt-5""><%= listing.title %></h5>
+            <p class="p-3">🌍 location: <%= listing.location %></br>
+              💲&nbsp price: <%= listing.price %></p>
+            <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-2">
+              <%= link_to 'Edit my buddy', edit_listing_path(listing), class:'btn-pill-pink mx-2' %>
+            </div>
           </div>
         <% end %>
       <% end %>

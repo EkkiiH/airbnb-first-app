@@ -12,12 +12,12 @@
     <% if @listings.any? %>
       <div class="d-flex justify-content-evenly flex-wrap">
         <% @listings.each do |listing| %>
-          <div class="card-category m-3 text-center">
+          <div class="card-category m-3">
             <%= link_to(listing_path(listing), class:'text-decoration-none ')  do  %>
               <div class="card-display" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
               <h2 class="p-3"><%= listing.title %></h2>
               <p class="p-3">🌍 location: <%= listing.location %></br>
-              💲 price: <%= listing.price %></p>
+              💲&nbsp price: <%= listing.price %></p>
             <% end %>
           </div>
         <% end %>
