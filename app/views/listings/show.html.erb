@@ -12,7 +12,13 @@ background-size: cover;">
       <h2 class="px-3 pt-1"><%= @listing.title %></h2>
       <p class="px-3 pt-2">🌍 location: <%= @listing.location %></br>💲&nbsp price: <%= @listing.price %>€</p>
       <p class="px-3 pt-2"><%= @listing.description %></p>
-    <div class="map-product"></div>
+    <div class="map-product">
+        <div style="width: 100%; height: 200px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
     </div>
   </div>
     <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-5">
