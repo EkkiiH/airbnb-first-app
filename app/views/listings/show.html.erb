@@ -6,13 +6,12 @@ background-size: cover;">
     <h1 class="d-flex">Your buddy <%= @listing.title %></h1>
 </div>
 <div class="light-bckgrnd p-5">
-  <div class="p-5 d-flex justify-content-evenly">
-    <div class="img-product" style="height:500px;background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
-    <div class="text-product">
-      <h2><%= @listing.title %></h2>
-      <p>🌍 <%= @listing.location %></p>
-      <p>💲 <%= @listing.price %></p>
-      <p><%= @listing.description %></p>
+  <div class="p-4 d-flex justify-content-evenly">
+    <div class="img-product mb-5 " style="background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
+    <div class="text-product ">
+      <h2 class="px-3 pt-1"><%= @listing.title %></h2>
+      <p class="px-3 pt-2">🌍 location: <%= @listing.location %></br>💲&nbsp price: <%= @listing.price %>€</p>
+      <p class="px-3 pt-2"><%= @listing.description %></p>
     <div class="map-product"></div>
     </div>
   </div>
