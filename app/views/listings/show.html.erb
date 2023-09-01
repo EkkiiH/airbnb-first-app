@@ -6,6 +6,7 @@ background-size: cover;">
     <h1 class="d-flex">Your buddy <%= @listing.title %></h1>
 </div>
 <div class="light-bckgrnd p-5">
+<<<<<<< HEAD
   <div class="p-5 d-flex justify-content-evenly">
     <div class="img-product" style="height:500px;background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
     <div class="text-product">
@@ -20,6 +21,15 @@ background-size: cover;">
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
     </div>
+=======
+  <div class="p-4 d-flex justify-content-evenly">
+    <div class="img-product mb-5 " style="background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
+    <div class="text-product ">
+      <h2 class="px-3 pt-1"><%= @listing.title %></h2>
+      <p class="px-3 pt-2">🌍 location: <%= @listing.location %></br>💲&nbsp price: <%= @listing.price %>€</p>
+      <p class="px-3 pt-2"><%= @listing.description %></p>
+    <div class="map-product"></div>
+>>>>>>> master
     </div>
   </div>
     <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-5">
