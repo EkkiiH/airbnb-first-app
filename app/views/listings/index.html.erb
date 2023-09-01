@@ -2,19 +2,21 @@
   <div class="container">
     <p>Mistrusting of humans? No judgement. Find a buddy to protect you when needed.</p>
     <h1>Hire your <strong>close protection buddy</strong>!</h1>
-   <div class="w-100 mx-5 p-5 search-bar">
+    <div class="w-100 mx-5 p-5 search-bar">
       <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a keyword" %>
-      <%= submit_tag "Search", class: "btn-pill-pink btn-pill-pink:hover" %>
-   </div>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a keyword" %>
+        <%= submit_tag "Search", class: "btn-pill-pink btn-pill-pink:hover" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
 <div class="d-flex flex-wrap light-bckgrnd">
   <div class="w-100 mx-5 p-5 search-bar">
     <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a keyword" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a keyword" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
 
   <div class="m-3 mb-5 px-5">
@@ -33,7 +35,6 @@
       </div>
     <% else %>
       <em>Sorry, no results</em>
-    <% end %>
     <% end %>
   </div>
   <div style="width: 100%; height: 600px;"
