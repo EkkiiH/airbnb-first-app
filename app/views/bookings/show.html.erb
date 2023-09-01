@@ -1,11 +1,26 @@
-<div class="container m-5">
-  Your bookings
+<div class="d-flex align-items-center justify-content-center banner-show" style="
+background:linear-gradient(45deg, rgba(252,152,66,0.7), rgba(254,95,117,0.7)), url('<%= cl_image_path @listing.photo.key %>');
+  background-position:0 15%;
+background-repeat: no-repeat;
+background-size: cover;">
+    <h1 class="d-flex">Congratulations!</h1>
+</div>
 
-  <div class="card m-3 p-3" style="width:24rem;">
-    <p><%= @booking.listing.title %></p>
-    <p><%= @booking.listing.location %></p>
-    <p><%= @booking.listing.price %></p>
-    <p><%= @booking.start_date %></p>
-    <p><%= @booking.end_date %></p>
+
+<div class="light-bckgrnd p-5">
+    <h3>Review your booking with <%= @booking.listing.title %></h3>
+  <div class="p-5 d-flex justify-content-evenly flex-wrap">
+    <div class="text-product">
+      <p>🌍 Pick up at <%= @booking.listing.location %></p>
+      <p>💲 Total cost <%= @booking.listing.price %></p>
+      <p>📅 Starting <%= @booking.start_date.strftime('%d-%m-%Y') %><br>📅 Ending <%= @booking.end_date.strftime('%d-%m-%Y') %></p>
+    <div style="width: 100%;height:50%;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+    </div>
+    <div class="img-product" style="height:500px;background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
   </div>
+
 </div>

@@ -1,22 +1,21 @@
-<div class="div">
-  <div class="listing-new-form">
+<div class="light-bckgrnd py-5 h-100">
+  <div class="container-form col-sm-8 col-lg-6">
     <div class="m-5">
-      <h1>Add your Buddy</h1>
+      <h1>Add your Buddy profil</h1>
+      <p>to rent your buddy to others, specify the requierd fields.</p>
     </div>
-
-    <div class="mb-3">
+    <div class="mb-3 form">
       <%= simple_form_for @listing do |f| %>
         <%= f.input :title, label: false, placeholder: "Write the name of your buddy..." %>
         <%= f.input :location, label: false, placeholder: "Where to pick it up..." %>
         <%= f.input :price, label: false, placeholder: "How much for the day?" %>
-        <%= f.input :description, label: false, placeholder: "Write the description..." %>
+        <%= f.input :description, :as => :text, label: false, placeholder: "Write the description...", :input_html => { class: 'test', :cols => 5, :rows => 6 } %>
         <%= f.input :photo, as: :file, label: false, placeholder: "Upload a pic of your buddy..."  %>
         <div>
           <%= link_to 'Cancel', root_path, class:'btn-pill-pink' %>
           <%= f.submit value: 'Add a buddy', class:'btn-pill-pink' %>
         </div>
       <% end %>
-
     </div>
   </div>
 </div>
