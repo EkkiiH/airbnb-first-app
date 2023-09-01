@@ -1,24 +1,50 @@
-<div class="containt m-3 d-flex">
-  <div class="m-3 p-3">
-    <h3>Bookings listing</h3>
-    <div class="card p-3" style="width:24rem;">
+<div class="d-flex align-items-center justify-content-center banner-show"
+    style=" background:linear-gradient(45deg, rgba(252,152,66,0.7),
+                        rgba(254,95,117,0.7)),
+                        url('<%= cl_image_path @listings.sample.photo.key %>');
+            background-position:0 15%;
+            background-repeat: no-repeat;
+            background-size: cover;">
+    <h1 class="d-flex">Your profil</h1>
+</div>
+
+<div class="d-flex flex-wrap light-bckgrnd">
+  <div class="m-3 mb-5 px-5">
+    <h3 class="my-3">Your incomming booking with Buddies</h3>
+
+    <div class="d-flex justify-content-evenly flex-wrap">
       <% @bookings.each do |booking|%>
         <% if booking.user = current_user %>
-          <h5><%= booking.listing.title %></h5>
+          <div class="card-category m-3">
+            <div class="card-display" style="background-image: url('<%= cl_image_path booking.listing.photo.key %>')" ></div>
+            <h3 class="px-3 pt-5"><%= booking.listing.title %></h3>
+            <p class="p-3">&nbsp&nbsp&nbsp&nbsp Your buddy wil be available :<br>
+            📅 From <%= booking.start_date.strftime('%d-%m-%Y') %><br>&nbsp&nbsp&nbsp&nbsp till <%= booking.end_date.strftime('%d-%m-%Y') %></br>
+            🌍 location: <%= booking.listing.location %></p>
+          </div>
         <% end %>
       <% end %>
     </div>
   </div>
 
-  <div class="m-3 p-3">
-    <h3>listing propreties</h3>
-    <div class="card p-3" style="width:24rem;">
+  <div class="m-3 mb-5 px-5">
+    <h3 class="my-3">All your buddies on rent</h3>
+
+    <div class="d-flex justify-content-evenly flex-wrap">
       <% @listings.each do |listing| %>
         <% if listing.user = current_user %>
-          <h5><%= listing.title %></h5>
+          <div class="card-category m-3">
+            <div class="card-display" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
+            <h5 class="px-3 pt-5""><%= listing.title %></h5>
+            <p class="p-3">🌍 location: <%= listing.location %></br>
+              💲&nbsp price: <%= listing.price %></p>
+            <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-2">
+              <%= link_to 'Edit my buddy', edit_listing_path(listing), class:'btn-pill-pink mx-2' %>
+            </div>
+          </div>
         <% end %>
       <% end %>
-    <%= link_to '➕ add new', new_listing_path, class: 'btn btn-success' %>
-    </div>
+    <div class="w-100 d-flex justify-content-center"><%= link_to '➕ add new', new_listing_path, class: 'btn-pill-pink' %></div>
     </div>
   </div>
+</div>
