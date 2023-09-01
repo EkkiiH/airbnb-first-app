@@ -15,7 +15,7 @@
 }
 
 .card-category a {
-  color: #ffffff;
+  color: #333;
 }
 
 .card-display {
@@ -25,4 +25,8 @@
   background-size: cover;
   overflow: hidden;
   border-radius: 5px 5px 0 0;
+}
+
+.card-btn-link {
+  color: #fff;
 }
