@@ -32,8 +32,8 @@
       <% @listings.each do |listing| %>
         <% if listing.user = current_user %>
           <div class="card-category m-3 text-center">
-            <h5><%= listing.title %></h5>
             <div class="card-display m-3" style="background-image: url('<%= cl_image_path listing.photo.key %>')" ></div>
+            <h5><%= listing.title %></h5>
           </div>
         <% end %>
       <% end %>

@@ -6,15 +6,15 @@ background-size: cover;">
     <h1 class="d-flex">Your buddy <%= @listing.title %></h1>
 </div>
 <div class="light-bckgrnd p-5">
-  <div class="p-5 d-flex">
+  <div class="p-5 d-flex justify-content-evenly">
     <div class="img-product" style="height:500px;background-image: url('<%= cl_image_path @listing.photo.key %>')"></div>
     <div class="text-product">
       <h2><%= @listing.title %></h2>
       <p>🌍 <%= @listing.location %></p>
       <p>💲 <%= @listing.price %></p>
       <p><%= @listing.description %></p>
+    <div class="map-product"></div>
     </div>
-    <%# <div class="map-product"></div> %>
   </div>
     <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-5">
       <%= link_to "Rent #{@listing.title}", new_listing_booking_path(@listing), class:'btn-pill-pink mx-2' %>
