@@ -38,13 +38,14 @@
             <h5 class="px-3 pt-5""><%= listing.title %></h5>
             <p class="p-3">🌍 location: <%= listing.location %></br>
               💲&nbsp price: <%= listing.price %></p>
-            <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-2">
-              <%= link_to 'Edit my buddy', edit_listing_path(listing), class:'btn-pill-pink mx-1 .card-btn-link' %>
+            <div class="d-flex align-items-end flex-row-reverse justify-content-center pb-2 card-btn-link justify-content-center">
+              <%= link_to 'Edit my buddy', edit_listing_path(listing), class:'btn-pill-pink mx-1' %>
             </div>
           </div>
         <% end %>
       <% end %>
-    <div class="w-100 d-flex justify-content-center"><%= link_to '➕ add new', new_listing_path, class: 'btn-pill-pink' %></div>
+    <div class="w-100 d-flex justify-content-center">
+      <%= link_to '➕ add new', new_listing_path, class: 'btn-pill-pink' %></div>
     </div>
   </div>
 </div>
