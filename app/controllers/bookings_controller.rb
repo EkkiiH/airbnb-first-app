@@ -3,6 +3,11 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    # @markers = @booking.geocoded.map {
+    #   lat: @booking.listing.latitude,
+    #   lng: @booking.listing.longitude
+    #   info_window_html: render_to_string(partial: "info_window", locals: {booking: @booking})}
+    @markers = [{ lat: @booking.listing.latitude, lng: @booking.listing.longitude}]
   end
 
   def new

@@ -17,6 +17,12 @@ class ListingsController < ApplicationController
   end
 
   def show
+    # @markers = @show.geocoded.map {
+    #   lat: @show.listing.latitude,
+    #   lng: @show.listing.longitude
+    #   info_window_html: render_to_string(partial: "info_window", locals: {show: @show})
+    # }
+    @markers = [{ lat: @listing.latitude, lng: @listing.longitude}]
   end
 
   def new
