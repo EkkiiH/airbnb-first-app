@@ -11,12 +11,6 @@
 </div>
 
 <div class="d-flex flex-wrap light-bckgrnd">
-  <div class="w-100 mx-5 p-5 search-bar">
-    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a keyword" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  </div>
-
   <div class="m-3 mb-5 px-5">
     <% if @listings.any? %>
       <div class="d-flex justify-content-evenly flex-wrap">
